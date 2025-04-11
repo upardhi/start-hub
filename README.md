@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Start-Hub
 
-## Getting Started
+Start-Hub is a modern, responsive web application built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**. It helps manage and showcase users through a clean UI and smart routing.
 
-First, run the development server:
+---
+
+## 📸 Demo
+
+> Coming soon... (You can deploy this project to platforms like **Vercel** for a live link.)
+
+---
+
+## 📁 Project Structure & Routing
+
+This app uses **Next.js App Router (introduced in v13+)**. Routes are based on the file structure in `src/app`.
+
+### ✅ Available Routes
+
+| Route         | Description                            |
+| ------------- | -------------------------------------- |
+| `/`           | Homepage (can customize in `page.tsx`) |
+| `/users`      | List of all users                      |
+| `/users/[id]` | Individual user profile by ID          |
+
+All pages are styled using Tailwind and components are reusable.
+
+---
+
+## 🧰 Tech Stack
+
+- ⚛️ **Next.js 15.3.0** — React-based framework
+- 🎨 **Tailwind CSS v4** — Utility-first CSS for fast styling
+- 🛡 **TypeScript v5** — Safer development with type checking
+- 💡 **Lucide React** — Icon library
+
+---
+
+## 📦 Installation
+
+### 1. Clone the repository
 
 ```bash
+git clone https://github.com/your-username/start-hub.git
+cd start-hub
+```
+
+## 📦 Installation
+
+### 1. Install dependencies
+
+```
+npm install
+# or
+yarn install
+
+```
+
+### 2. Run Application
+
+```
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once started, visit your app at:
+🔗 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🧭 Available Routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Route         | Description                  |
+| ------------- | ---------------------------- |
+| `/`           | User List                    |
+| `/users`      | Users management page        |
+| `/users/[id]` | Individual user profile page |
