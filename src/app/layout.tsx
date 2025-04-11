@@ -18,6 +18,16 @@ export const metadata: Metadata = {
   title: "Start Hub",
   description:
     "Start Hub is a platform for startups to find the best tools and resources to help them grow.",
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+      "de-DE": "/de-DE",
+    },
+  },
+  openGraph: {
+    images: "/og-image.png",
+  },
 };
 
 export default function RootLayout({
