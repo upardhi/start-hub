@@ -19,7 +19,7 @@ This app uses **Next.js App Router (introduced in v13+)**. Routes are based on t
 | Route         | Description                            |
 | ------------- | -------------------------------------- |
 | `/`           | Homepage (can customize in `page.tsx`) |
-| `/users`      | List of all users                      |
+| `/users/list` | List of all users                      |
 | `/users/[id]` | Individual user profile by ID          |
 
 All pages are styled using Tailwind and components are reusable.
