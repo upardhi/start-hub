@@ -4,7 +4,11 @@ import Logo from "./Logo";
 import Link from "next/link";
 
 const Header: React.FC = () => {
-  const isUsersPage = false;
+  const navItems = [
+    { href: "/", label: "Home", icon: Home },
+    { href: "/users", label: "Users", icon: Users },
+    { href: "/settings", label: "Settings", icon: Settings },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white dark:bg-gray-800">
@@ -15,37 +19,24 @@ const Header: React.FC = () => {
 
         <nav className="hidden md:block">
           <ul className="flex space-x-4">
-            <li>
-              <Link
-                href="/"
-                className="flex items-center px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                <Home className="mr-2 h-4 w-4" />
-                <span>Home</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/users"
-                className={`flex items-center px-3 py-2 text-sm rounded-md ${
-                  isUsersPage
-                    ? "bg-gray-100 dark:bg-gray-700"
-                    : "hover:bg-gray-100 dark:hover:bg-gray-700"
-                }`}
-              >
-                <Users className="mr-2 h-4 w-4" />
-                <span>Users</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="flex items-center px-3 py-2 text-sm rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                <Settings className="mr-2 h-4 w-4" />
-                <span>Settings</span>
-              </Link>
-            </li>
+            {navItems.map(({ href, label, icon: Icon }) => {
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`flex items-center px-3 py-2 text-sm rounded-md transition-colors 
+                     
+                      
+                         hover:bg-gray-100 dark:hover:bg-gray-700
+                    `}
+                    aria-current={"page"}
+                  >
+                    <Icon className="mr-2 h-4 w-4" />
+                    <span>{label}</span>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
