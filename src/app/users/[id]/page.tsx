@@ -1,7 +1,8 @@
-export default function UserDetails({ params }: { params: { id: string } }) {
-  return (
-    <div>
-      <h1>User Details {params.id}</h1>
-    </div>
-  );
+export default async function UserDetails({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  return <div>User Id Details: {id}</div>;
 }

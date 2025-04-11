@@ -11,7 +11,10 @@ interface UserCardProps {
 
 const UserCard: React.FC<UserCardProps> = ({ user }) => {
   return (
-    <li className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+    <li
+      role="listitem"
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
+    >
       <Link
         href={`/users/${user.id}`}
         className="block p-5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
@@ -21,10 +24,10 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
           <div className="flex-shrink-0 h-12 w-12">
             {user.avatar ? (
               <Image
+                alt={`Avatar of ${user.name}`}
                 src={user.avatar}
                 width={100}
                 height={100}
-                alt="Picture of the author"
               />
             ) : (
               <div className="h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
@@ -46,9 +49,13 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
                   {user.role}
                 </p>
               </div>
-              <Badge
-                variant={user.status === "active" ? "default" : "secondary"}
-              />
+              <span aria-label={`User status is ${user.status}`}>
+                <Badge
+                  variant={user.status === "active" ? "default" : "secondary"}
+                >
+                  {user.status}
+                </Badge>
+              </span>
             </div>
             <div className="mt-2 text-sm text-gray-600 dark:text-gray-300">
               <p>{user.email}</p>

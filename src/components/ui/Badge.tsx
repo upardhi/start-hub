@@ -39,8 +39,19 @@ const baseStyle: React.CSSProperties = {
   transition: "all 0.2s ease-in-out",
 };
 
-export function Badge({ variant = "default", style, ...props }: BadgeProps) {
+export function Badge({
+  variant = "default",
+  children,
+  style,
+  ...props
+}: BadgeProps) {
   return (
-    <div style={{ ...baseStyle, ...styles[variant], ...style }} {...props} />
+    <div
+      style={{ ...baseStyle, ...styles[variant], ...style }}
+      {...props}
+      className="capitalize"
+    >
+      {children}
+    </div>
   );
 }
