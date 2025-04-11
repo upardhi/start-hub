@@ -6,7 +6,7 @@ Start-Hub is a modern, responsive web application built with **Next.js 15**, **T
 
 ## 📸 Demo
 
-> Coming soon... (You can deploy this project to platforms like **Vercel** for a live link.)
+https://start-hub-seven.vercel.app/
 
 ---
 
